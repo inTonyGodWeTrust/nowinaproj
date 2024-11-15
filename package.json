@@ -1,0 +1,16 @@
+{
+    "name": "nowinaproject",
+    "version": "1.0.0",
+    "description": "",
+    "author": "Tony Godovanik",
+    "license": "ISC",
+    "devDependencies": {
+        "@codeceptjs/allure-legacy": "1.0.2",
+        "codeceptjs": "^3.6.7",
+        "playwright": "^1.48.1",
+        "allure-commandline": "^2.32.0"
+    },
+    "scripts": {
+        "test": "npx codeceptjs run --grep '(?=.*@validation-documents)' --plugins allure && allure generate output -o allure-report --clean && allure serve output -h 0.0.0.0 -p 4999"
+    }
+}
